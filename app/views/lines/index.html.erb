@@ -1,0 +1,22 @@
+<h1> Lines for the Bus Tracker <h1>
+
+<div class="col-md-8">
+
+  <% if @lines.length >0 %>
+
+  <% @lines.each do |line| %>
+
+      <p><a href="/lines/<%= line.id %>" target="_blank", name = "line/<%= line.id %>" %><%= line.name %></a>
+
+         <%= link_to "Edit", edit_line_path(line), :class => "btn btn-primary btn-small" %>
+      </p>
+
+  <% end %>
+  <% else %>
+    <p> There are no Lines to display. </p>
+  <% end %>
+
+  <p><a href="/lines/new"> Create a new line </a></p>
+<br><br>
+
+</div>

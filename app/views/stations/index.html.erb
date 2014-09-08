@@ -1,0 +1,13 @@
+<h1> Stations for the Bus Tracker <h1>
+
+<div class="col-md-8">
+  <% @stations.each do |station| %>
+
+      <p><a href="/stations/<%= station.id %>" target="_blank", name = "station/<%= station.id %>" %><%= station.name %></a>
+
+         <%= link_to "Edit", edit_station_path(line), :class => "btn btn-primary btn-small" %>
+      </p>
+
+  <% end %>
+
+</div>
